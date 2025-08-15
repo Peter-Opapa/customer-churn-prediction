@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 600px; margin: auto; }
+        h2 { color: #2c3e50; }
+        form { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        label { display: block; margin-top: 15px; }
+        select, input[type=number] { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px 20px; background: #2980b9; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+        .result { margin-top: 30px; padding: 15px; background: #eafaf1; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Churn Prediction</h2>
+        <form method="post">
+            {% for feature, opts in options.items() %}
+                <label for="{{ feature }}">{{ feature.replace('_', ' ').title() }}</label>
+                <select name="{{ feature }}" id="{{ feature }}">
+                    {% for opt in opts %}
+                        <option value="{{ opt }}">{{ opt }}</option>
+                    {% endfor %}
+                </select>
+            {% endfor %}
+            <label for="tenure">Tenure</label>
+            <input type="number" name="tenure" id="tenure" min="0" step="1" required>
+            <label for="MonthlyCharges">Monthly Charges</label>
+            <input type="number" name="MonthlyCharges" id="MonthlyCharges" min="0" step="0.01" required>
+            <label for="TotalCharges">Total Charges</label>
+            <input type="number" name="TotalCharges" id="TotalCharges" min="0" step="0.01" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+        <div class="result">
+            <strong>Prediction:</strong> {{ prediction }}<br>
+            <strong>Prediction Probability:</strong> {{ pred_prob }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
