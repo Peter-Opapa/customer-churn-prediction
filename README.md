@@ -129,7 +129,7 @@ Go to `http://localhost:5000` in your browser.
 - Built and deployed a production-ready web app for business use.
 
 ## Deployment
-![Deployment](images\rendersuccess.png)
+![Deployment](https://github.com/Peter-Opapa/customer-churn-prediction/blob/main/images/rendersuccess.png)
 
 ### Deploying to Render (Main Steps)
 
