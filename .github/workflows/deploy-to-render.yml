@@ -16,7 +16,7 @@ jobs:
 
       - name: Trigger Render deploy via webhook
         env:
-          RENDER_WEBHOOK_URL: ${{ secrets.RENDER_WEBHOOK_URL }}
+          RENDER_WEBHOOK_URL: ${{ secrets.RENDER_DEPLOY_KEY }}
         run: |
           set -euo pipefail
 
