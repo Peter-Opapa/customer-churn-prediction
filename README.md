@@ -1,4 +1,4 @@
-![Workflow Overview](workflow.png)
+<img src="workflow.png" alt="Workflow Overview" width="800"/>
 
 # Customer Churn Prediction Using Machine Learning
 
@@ -20,6 +20,8 @@ This project predicts customer churn for a telecom company using machine learnin
 
 ## Web App
 The app is deployed at: [https://customerchurnprediction-94da.onrender.com](https://customerchurnprediction-94da.onrender.com)
+
+<img src="webUI.png" alt="WebUI" width="600"/>
 
 Users can:
 - Select categorical features from dropdowns
@@ -117,6 +119,7 @@ Go to `http://localhost:5000` in your browser.
 - Built and deployed a production-ready web app for business use.
 
 ## Deployment
+![Deployment](rendersuccess.png)
 
 ### Deploying to Render (Main Steps)
 
@@ -130,11 +133,6 @@ Go to `http://localhost:5000` in your browser.
 	```
 6. **Click "Create Web Service" to deploy.**
 7. **Access your app at the provided Render URL.**
-
-## Workflow Overview
-The image below summarizes the end-to-end workflow:
-
-![Workflow Overview](workflow.png)
 
 ## License
 This project is licensed under the MIT License.
