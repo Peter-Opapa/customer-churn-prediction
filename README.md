@@ -1,4 +1,4 @@
-<img src="workflow.png" alt="Workflow Overview" width="800"/>
+<img src="images\workflow.png" alt="Workflow Overview" width="800"/>
 
 # Customer Churn Prediction Using Machine Learning
 
@@ -21,7 +21,7 @@ This project predicts customer churn for a telecom company using machine learnin
 ## Web App
 The app is deployed at: [https://customerchurnprediction-94da.onrender.com](https://customerchurnprediction-94da.onrender.com)
 
-<img src="webUI.png" alt="WebUI" width="600"/>
+<img src="images\webUI.png" alt="WebUI" width="600"/>
 
 Users can:
 - Select categorical features from dropdowns
@@ -30,19 +30,29 @@ Users can:
 
 ## File Structure
 ```
-├── app.py                        # Flask backend
-├── customer_churn_model.pkl      # Trained model
-├── Customer_Churn_Prediction_using_ML.ipynb # Jupyter notebook (full workflow)
-├── encoders.pkl                  # Saved label encoders
-├── LICENSE                       # License
-├── README.md                     # Project documentation
-├── render.yaml                   # Render deployment config
-├── requirements.txt              # Python dependencies
+├── LICENSE
+├── README.md
+├── render.yaml
+├── requirements.txt
+├── .gitignore
+├── .github/
+│   └── workflows/
+│       └── deploy-to-render.yml
+├── data/
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── models/
+│   ├── customer_churn_model.pkl
+│   └── encoders.pkl
+├── notebooks/
+│   └── Customer_Churn_Prediction_using_ML.ipynb
+├── src/
+│   └── app.py
 ├── templates/
-│   └── index.html                # Web UI template
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv # Dataset
-├── workflow.png                  # Workflow image
-├── .gitignore                    # Git ignore file
+│   └── index.html
+├── images/
+│   ├── workflow.png
+│   ├── webUI.png
+│   └── rendersuccess.png
 ```
 
 ## Getting Started
@@ -119,7 +129,7 @@ Go to `http://localhost:5000` in your browser.
 - Built and deployed a production-ready web app for business use.
 
 ## Deployment
-![Deployment](rendersuccess.png)
+![Deployment](images\rendersuccess.png)
 
 ### Deploying to Render (Main Steps)
 
